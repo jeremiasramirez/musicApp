@@ -1,0 +1,13 @@
+.containerAppLogo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: -10px;
+    background-color: blue;
+    text-align: center;
+}
+
+.containerAppLogo img {
+    width: 270px;
+}
