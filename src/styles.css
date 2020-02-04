@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+.active--blue--menu {
+    border-bottom: 3px solid white;
+    margin-bottom: -3px;
+    transition: .5s;
+}
