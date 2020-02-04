@@ -4,18 +4,19 @@ import { Routes, RouterModule } from "@angular/router"
 
 
 // components
-
-import { AppComponent } from './app.component';
+ 
 import { HomeComponent } from "./home/home.component"
 import { SearchComponent } from "./search/search.component"
+
+import { InitComponent } from "./initApp/init.component"
 
 
 const ROUTES : Routes = [
 
     {path: 'home', component: HomeComponent},
     {path: 'search', component: SearchComponent},
-    {path: '', component: AppComponent},
-    {path: '**', component: AppComponent},
+    {path: '', component: InitComponent},
+    {path: '**', component: InitComponent}
    
 
 ]
