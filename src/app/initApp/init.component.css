@@ -17,5 +17,5 @@
 .containerAppLogo img:hover {
     transition: .8s;
     opacity: .8;
-    transform: translateY(-.7px)
+    transform: translateY(-.9px)
 }

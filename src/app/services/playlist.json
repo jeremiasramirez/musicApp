@@ -1,0 +1,22 @@
+[{
+
+    "id": 1,
+    "name": "Romeo santos",
+    "image": "1.jpeg",
+    "playlist": [{
+            "id": 1,
+            "title": "Amor enterrado"
+        },
+        {
+            "id": 2,
+            "title": "La demanda"
+        },
+        {
+            "id": 3,
+            "title": "Payasos"
+        }
+    ]
+
+
+
+}]

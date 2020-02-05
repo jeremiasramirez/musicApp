@@ -14,24 +14,35 @@ import { SpotyService } from "../services/spoty.service"
 export class HomeComponent{
 
     public cardReleases : any = [];
+    public lenCardReleases : number;
 
-
-
+    public showNameStyle : any = 0;
 
     constructor(private spoty: SpotyService){
 
-        this.albumReleases();
+        this.albumReleases()
 
          
     }
-
+    
 
     albumReleases (){
 
-        this.spoty.getNewRelease().subscribe((response)=>{
-            console.log(response)
-        })
-
+       
+ 
+        this.cardReleases= this.spoty.getNewRelease();
+        console.log(this.cardReleases)
     }
+
+    showName(){
+        
+        if (this.showNameStyle == 0){
+            this.showNameStyle = 1;
+        }
+        else{
+            this.showNameStyle = 0;
+        }
+    }   
+ 
 
 }

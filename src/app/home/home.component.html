@@ -1,1 +1,20 @@
-<h1>Hola</h1>
+<div>
+    <h1 class="title card__title">New releases</h1>
+
+    <div class="cards in ">
+
+
+
+        <div class="card" *ngFor="let releases of cardReleases">
+            <div class="container__image">
+                <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images" (click)="showName()">
+            </div>
+            <div *ngIf="showNameStyle==1" class="nameAlbumReleases in">{{releases.name}}</div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
