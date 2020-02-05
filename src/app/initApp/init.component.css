@@ -10,4 +10,12 @@
 
 .containerAppLogo img {
     width: 270px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.containerAppLogo img:hover {
+    transition: .8s;
+    opacity: .8;
+    transform: translateY(-.7px)
 }
