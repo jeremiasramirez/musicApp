@@ -173,6 +173,34 @@ export class SpotyService{
    
    
     }
+    getAlbum(){
+        return [{
+
+            "id": 1,
+            "name": "Romeo santos",
+            "image": "1.jpeg",
+            "playlist": [{
+                    "id": 1,
+                    "title": "Payasos",
+                    "audio": ["1.mp3"]
+                },
+                {
+                    "id": 2,
+                    "title": "La demanda",
+                    "audio": ["2.mp3"]
+                },
+        
+                {
+                    "id": 3,
+                    "title": "Amor enterrado",
+                    "audio": ["3.mp3"]
+                }
+            ]
+        
+        
+        
+        }]
+    }
 
 
 }

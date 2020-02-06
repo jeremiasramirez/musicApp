@@ -18,3 +18,34 @@
 
 
 </div>
+
+
+
+<section class="albums">
+
+    <div class="album" *ngFor="let album of albums; let i=index">
+
+        <img src="../../assets/albumImage/{{album.image}}" alt="image album">
+
+        <h1 class="title audio__title">{{album.name}}</h1>
+        <div class="showOrHideButtons">
+            <button [ngClass]="{'btn--add' : bandList==0, 'btn--error' : bandList==1}" class="large" (click)="showList()">{{textButtonHideOrShow}}</button>
+        </div>
+
+        <article *ngIf="bandList==1" class="responsive">
+
+            <div class="audios in" *ngFor="let sound of albums[i].playlist">
+                <div>
+                    <span class="id__sound"> {{sound.id}} </span>
+                    <h1 class="title audio__title">{{sound.title}}</h1>
+                </div>
+
+                <audio src="../../assets/audio/audios/{{sound.audio}}" controls></audio>
+            </div>
+
+        </article>
+
+    </div>
+
+
+</section>
