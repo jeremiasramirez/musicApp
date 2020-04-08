@@ -9,7 +9,8 @@ import { HomeComponent } from "./home/home.component"
 import { InitComponent } from "./initApp/init.component"
 
 import { routing } from "./app.routing";
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutComponent } from './about/about.component'
   imports: [
     BrowserModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
