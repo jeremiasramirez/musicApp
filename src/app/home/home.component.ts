@@ -16,7 +16,7 @@ export class HomeComponent{
 
     public cardReleases : any = [];
     public lenCardReleases : number;
-    public albums : any[] = [];
+    public albums  = [];
     public showNameStyle : any = 0;
     public bandList  : number = 0;
     public textButtonHideOrShow : string = "Playlist"
@@ -26,7 +26,7 @@ export class HomeComponent{
         this.albumReleases()
         this.getAlbums()
 
-       
+
 
     }
 
