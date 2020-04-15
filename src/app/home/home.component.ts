@@ -1,6 +1,6 @@
 import { Component } from "@angular/core"
 import { SpotyService } from "../services/spoty.service"
-import { HttpClient } from "@angular/common/http";
+
 @Component({
 
     selector: 'home',
@@ -8,10 +8,7 @@ import { HttpClient } from "@angular/common/http";
     styleUrls: ['./home.component.css'] ,
     providers: [SpotyService]
 
-
 })
-
-
 export class HomeComponent{
 
     public cardReleases  = [];
@@ -21,28 +18,16 @@ export class HomeComponent{
     public bandList  : number = 0;
     public textButtonHideOrShow : string = "Playlist"
 
-    constructor(private spoty: SpotyService , public http:HttpClient){
-
-        this.albumReleases()
-        this.getAlbums()
-
-
-
+    constructor(private spoty: SpotyService){
+      this.albumReleases();
     }
 
 
     albumReleases (){
-
-
-
-        // this.cardReleases= this.spoty.getNewRelease();
-
+      this.spoty.getNewRelease().subscribe(data=>this.cardReleases = data)
     }
 
     getAlbums(){
-
-        // this.albums= this.spoty.getAlbum()
-        console.log(this.albums)
 
     }
 
