@@ -14,7 +14,7 @@ import { HttpClient } from "@angular/common/http";
 
 export class HomeComponent{
 
-    public cardReleases : any = [];
+    public cardReleases  = [];
     public lenCardReleases : number;
     public albums  = [];
     public showNameStyle : any = 0;
@@ -35,13 +35,13 @@ export class HomeComponent{
 
 
 
-        this.cardReleases= this.spoty.getNewRelease();
+        // this.cardReleases= this.spoty.getNewRelease();
 
     }
 
     getAlbums(){
 
-        this.albums= this.spoty.getAlbum()
+        // this.albums= this.spoty.getAlbum()
         console.log(this.albums)
 
     }

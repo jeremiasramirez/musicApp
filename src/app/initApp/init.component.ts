@@ -1,11 +1,11 @@
 import { Component } from "@angular/core"
 import { Router } from "@angular/router"
-
+import { timer } from "rxjs";
 @Component({
 
     selector: 'init',
     templateUrl: './init.component.html',
-    styleUrls: ['./init.component.css'] 
+    styleUrls: ['./init.component.css']
 
 
 })
@@ -18,7 +18,7 @@ export class InitComponent{
 
     goToHome(){
 
-        this.ROUTING.navigate(["home"]);
+      timer(600).subscribe(timing => this.ROUTING.navigate(["home"]))
 
     }
 }

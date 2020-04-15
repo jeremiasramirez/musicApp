@@ -10,7 +10,9 @@
 
 .containerAppLogo img {
     width: 270px;
+    color:white;
     transition: .4s;
+    /* background-color: blue; */
     cursor: pointer;
 }
 

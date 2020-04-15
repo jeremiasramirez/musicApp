@@ -29,7 +29,8 @@
               "node_modules/jeremias-lib/css/jeremias-lib.css",
               "node_modules/jeremias-theme/css/jeremias-theme.css",
               "node_modules/jeremias-menu/css/jeremias-menu.css",
-              "node_modules/jeremias-button/css/jeremias-button.css"
+              "node_modules/jeremias-button/css/jeremias-button.css",
+              "node_modules/jeremias-alert/css/jeremias-alert.css",
 
             ],
             "scripts": [
