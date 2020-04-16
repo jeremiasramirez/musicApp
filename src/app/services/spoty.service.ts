@@ -14,10 +14,10 @@ export class SpotyService{
     }
     getNewRelease(){
 
-      return ajax.get(this.newReleases).pipe(pluck('response'),delay(500))
+      return ajax.get(this.newReleases).pipe(pluck('response'),delay(1000))
     }
     getAlbum(){
-
+      return  ajax.get("assets/datapi/playlist.json").pipe(pluck('response'))
     }
 
 
