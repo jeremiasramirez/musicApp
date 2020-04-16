@@ -27,7 +27,7 @@
 
         <h1 class="title audio__title">{{album.name}}</h1>
         <div class="showOrHideButtons">
-            <button [ngClass]="{'btn--add' : bandList==0, 'btn--error' : bandList==1}" class="large" (click)="showList()">{{textButtonHideOrShow}}</button>
+            <button  mat-flat-button class="large" >Listen <i class="fas fa-arrow-right"></i></button>
         </div>
 
         <article *ngIf="bandList==1" class="responsive">
@@ -47,4 +47,3 @@
 
 
 </section>
- 

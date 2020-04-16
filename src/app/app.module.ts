@@ -14,13 +14,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 // material
 import { MatButtonModule } from "@angular/material/button";
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
 
     AppComponent,
     HomeComponent,
     InitComponent,
-    AboutComponent
+    AboutComponent,
+    SearchComponent
 
   ],
   imports: [

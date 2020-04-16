@@ -16,10 +16,11 @@ export class HomeComponent{
     public albums  = [];
     public showNameStyle : any = 0;
     public bandList  : number = 0;
-    public textButtonHideOrShow : string = "Playlist"
+ 
 
     constructor(private spoty: SpotyService){
       this.albumReleases();
+      this.getAlbums();
     }
 
 
@@ -28,19 +29,10 @@ export class HomeComponent{
     }
 
     getAlbums(){
-
+      this.spoty.getAlbum().subscribe(resp=>this.albums = resp)
     }
 
-    showList(){
-        if (this.bandList == 0){
-            this.bandList = 1;
-            this.textButtonHideOrShow  = "Listening"
-        }
-        else{
-            this.bandList = 0;
-            this.textButtonHideOrShow  = "Playlist"
-        }
-    }
+
     showName(){
 
         if (this.showNameStyle == 0){
