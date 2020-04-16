@@ -16,11 +16,12 @@ export class HomeComponent{
     public albums  = [];
     public showNameStyle : any = 0;
     public bandList  : number = 0;
- 
+
 
     constructor(private spoty: SpotyService){
       this.albumReleases();
       this.getAlbums();
+      this.spoty.changeTextNamePage("Music")
     }
 
 

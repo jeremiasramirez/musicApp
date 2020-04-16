@@ -7,15 +7,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/home.component"
 
 import { InitComponent } from "./initApp/init.component"
-
+import { SearchComponent } from './search/search.component';
+import { ReleasesComponent } from './releases/releases.component';
 import { routing } from "./app.routing";
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 // material
 import { MatButtonModule } from "@angular/material/button";
-import { SearchComponent } from './search/search.component';
-import { ReleasesComponent } from './releases/releases.component';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { ExploreComponent } from './explore/explore.component';
+import { AlbumsComponent } from './albums/albums.component';
+
 @NgModule({
   declarations: [
 
@@ -24,7 +27,9 @@ import { ReleasesComponent } from './releases/releases.component';
     InitComponent,
     AboutComponent,
     SearchComponent,
-    ReleasesComponent
+    ReleasesComponent,
+    ExploreComponent,
+    AlbumsComponent
 
   ],
   imports: [
@@ -32,7 +37,8 @@ import { ReleasesComponent } from './releases/releases.component';
     routing,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

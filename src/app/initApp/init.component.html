@@ -1,6 +1,7 @@
-<div class="containerAppLogo ">
 
-    <div class="responsive in">
+<div class="containerAppLogo " >
+
+    <div class="responsive in" *ngIf="hideContent.off">
         <h1 class="title text--white">SpotyMusic</h1>
 
         <img class="imageLogo" src="../../assets/logo/abstract.png" (click)="goToHome()" alt="App music logo">
@@ -10,4 +11,7 @@
         <br>
         <button mat-flat-button   class=" min btnGo" (click)="goToHome()">Explore <i class="fas fa-arrow-right"></i></button>
     </div>
+</div>
+<div class="responsive inTop" *ngIf="!hideContent.off">
+  <mat-spinner color="accent"></mat-spinner>
 </div>

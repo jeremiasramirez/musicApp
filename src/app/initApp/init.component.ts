@@ -12,13 +12,15 @@ import { timer } from "rxjs";
 
 
 export class InitComponent{
-
+    public hideContent = {
+      off: true
+    }
     constructor(private ROUTING : Router){}
 
 
     goToHome(){
-
-      timer(600).subscribe(timing => this.ROUTING.navigate(["home"]))
+      this.hideContent.off=false;
+      timer(1000).subscribe(timing => this.ROUTING.navigate(["home"]))
 
     }
 }

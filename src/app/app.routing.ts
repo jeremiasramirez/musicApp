@@ -8,18 +8,21 @@ import { Routes, RouterModule } from "@angular/router"
 import { HomeComponent } from "./home/home.component"
 import { InitComponent } from "./initApp/init.component"
 import { SearchComponent } from './search/search.component';
-
-
+import { ExploreComponent } from './explore/explore.component';
+import { AboutComponent } from './about/about.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { ReleasesComponent } from './releases/releases.component';
 const ROUTES : Routes = [
 
     {path: 'home', component: HomeComponent},
-    {path: 'albums', component: HomeComponent},
-    {path: 'releases', component: HomeComponent},
-    {path: 'albums/track/:id', component: HomeComponent},
+    {path: 'albums', component: AlbumsComponent},
+    {path: 'explore', component: ExploreComponent},
+    {path: 'releases', component: ReleasesComponent},
+    {path: 'albums/track/:id', component: AlbumsComponent},
     {path: 'search', component: SearchComponent},
     {path: 'search/track/:track', component: SearchComponent},
     {path: 'search/album/:album', component: SearchComponent},
-    {path: 'about', component: HomeComponent},
+    {path: 'about', component: AboutComponent},
     {path: '', component: InitComponent},
     {path: '**', component: InitComponent}
 
