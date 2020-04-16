@@ -1,14 +1,30 @@
+
 .cards {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-x: scroll;
-    overflow-y: hidden;
- 
+    overflow : hidden;
+    /* overflow-y: hidden; */
+    text-align: center;
 
 }
+/*
+ .cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+
+}
+*/
+
 
 .card__image {
     border-radius: 50%;

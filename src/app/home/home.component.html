@@ -1,13 +1,13 @@
-<div>
-    <div class="cards in ">
+<div class="containerNewReleases">
+    <div class="cards inTop ">
 
 
 
         <div class="card" *ngFor="let releases of cardReleases">
             <div class="container__image">
-                <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images" (click)="showName()">
+                <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images">
             </div>
-            <div *ngIf="showNameStyle==1" class="nameAlbumReleases in">{{releases.name}}</div>
+            <!-- <div class="nameAlbumReleases in">{{releases.name}}</div> -->
         </div>
 
 
@@ -27,7 +27,7 @@
 
         <h1 class="title audio__title">{{album.name}}</h1>
         <div class="showOrHideButtons">
-            <button  mat-flat-button class="large" >Listen <i class="fas fa-arrow-right"></i></button>
+            <button  mat-flat-button class="btn--blue large" >Listen <i class="fas fa-arrow-right"></i></button>
         </div>
 
         <article *ngIf="bandList==1" class="responsive">

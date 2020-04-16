@@ -12,6 +12,9 @@ export class SpotyService{
     constructor(){
 
     }
+    public changeTextNamePage(name:string){
+        document.getElementById('idTheme').innerText=name
+    }
     getNewRelease(){
 
       return ajax.get(this.newReleases).pipe(pluck('response'),delay(1000))

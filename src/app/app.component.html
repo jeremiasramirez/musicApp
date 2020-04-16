@@ -1,8 +1,13 @@
 <nav class=menu--blue style="margin-top: -1.8em;">
-    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/home']">Listen</a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/home']" title="Listen"> <i class="fas fa-headphones"></i></a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/releases']" title="Releases"> <i class="fas fa-play"></i></a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/albums']" title="Albums">  <i class="fas fa-compact-disc"></i></a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/explore']" title="Explore">  <i class="fas fa-location-arrow"></i></a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/search']" title="Search">  <i class="fas fa-search"></i></a></li>
+    <li><a [routerLinkActive]="['active--blue--menu']" [routerLink]="['/about']" title="Info">  <i class="fas fa-info"></i></a></li>
 </nav>
-<div class="theme--blue">
-  <p>Music</p>
+<div class="theme--blue" >
+  <p id="idTheme">Music</p>
 </div>
 
 <router-outlet></router-outlet>

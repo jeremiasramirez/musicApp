@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 // material
 import { MatButtonModule } from "@angular/material/button";
 import { SearchComponent } from './search/search.component';
+import { ReleasesComponent } from './releases/releases.component';
 @NgModule({
   declarations: [
 
@@ -22,7 +23,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     InitComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    ReleasesComponent
 
   ],
   imports: [

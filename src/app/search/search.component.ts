@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component  } from '@angular/core';
+import { SpotyService } from "../services/spoty.service"
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  providers: [SpotyService]
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent  {
 
-  constructor() { }
+  constructor(public spoty:SpotyService) {
+    this.spoty.changeTextNamePage("Search")
+  }
 
   ngOnInit() {
+
   }
 
 }
