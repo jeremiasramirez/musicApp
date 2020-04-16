@@ -1,0 +1,48 @@
+
+.cards {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   overflow-y: hidden;
+   overflow-x: scroll;
+
+   overflow-y: hidden;
+   overflow-x: hidden;
+   text-align: center;
+
+}
+
+
+.card__image {
+    border-radius: 50%;
+    animation: rotat 1s 1s linear;
+    transition: 1s;
+}
+
+.card__title {
+    font-size: 16px;
+    margin-top: -20px;
+    font-weight: 600;
+    color: rgb(141, 14, 52);
+}
+
+.card__title::first-letter {
+    font-size: 22px;
+}
+
+.card__image:hover {
+    transform: scale(1.1);
+    transition: .9s;
+}
+
+.nameAlbumReleases {
+    background-color: blue;
+    position: relative;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-family: arial;
+    border-radius: 10px;
+    word-wrap: break-word;
+}

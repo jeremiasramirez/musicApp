@@ -8,11 +8,15 @@ import { SpotyService } from "../services/spoty.service"
     providers: [SpotyService]
 })
 export class ReleasesComponent  {
+    public cardReleases  = [];
 
   constructor(public spoti:SpotyService) {
       this.spoti.changeTextNamePage("Releases")
+      this.albumReleases()
   }
 
 
-
+  albumReleases (){
+    this.spoti.getNewRelease().subscribe(data=>this.cardReleases = data)
+  }
 }

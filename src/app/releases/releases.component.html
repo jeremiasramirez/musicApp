@@ -1,1 +1,18 @@
-<p>releases works!</p>
+<div class="containerNewReleases">
+    <div class="cards inTop " >
+
+
+
+        <div class="card" *ngFor="let releases of cardReleases" matRipple>
+            <div class="container__image">
+                <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images">
+            </div>
+            <div class="nameAlbumReleases in">{{releases.name}}</div>
+        </div>
+
+
+
+    </div>
+
+
+</div>

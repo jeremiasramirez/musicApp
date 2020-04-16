@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow : hidden;
     /* overflow-y: hidden; */
     text-align: center;

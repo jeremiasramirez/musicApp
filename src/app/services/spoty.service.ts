@@ -10,7 +10,7 @@ export class SpotyService{
 
     public newReleases :string = "assets/datapi/albumRelease.json"
     constructor(){
-
+     
     }
     public changeTextNamePage(name:string){
         document.getElementById('idTheme').innerText=name

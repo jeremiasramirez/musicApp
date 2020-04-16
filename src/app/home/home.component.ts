@@ -1,6 +1,7 @@
 import { Component } from "@angular/core"
 import { SpotyService } from "../services/spoty.service"
-
+import { Subject } from "rxjs";
+import { take } from "rxjs/operators";
 @Component({
 
     selector: 'home',
@@ -16,7 +17,7 @@ export class HomeComponent{
     public albums  = [];
     public showNameStyle : any = 0;
     public bandList  : number = 0;
-
+    public obsReleases = new Subject()
 
     constructor(private spoty: SpotyService){
       this.albumReleases();
@@ -26,11 +27,17 @@ export class HomeComponent{
 
 
     albumReleases (){
-      this.spoty.getNewRelease().subscribe(data=>this.cardReleases = data)
+      this.spoty.getNewRelease().subscribe(data=>{
+        for (let index = 0; index < 1; index++) {
+          this.cardReleases[index] = data[index]
+
+        }
+      })
     }
 
     getAlbums(){
-      this.spoty.getAlbum().subscribe(resp=>this.albums = resp)
+      this.spoty.getAlbum().subscribe(resp=>this.albums = resp )
+
     }
 
 
