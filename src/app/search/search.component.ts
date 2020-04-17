@@ -1,5 +1,6 @@
 import { Component  } from '@angular/core';
 import { SpotyService } from "../services/spoty.service"
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -8,12 +9,13 @@ import { SpotyService } from "../services/spoty.service"
 })
 export class SearchComponent  {
 
-  constructor(public spoty:SpotyService) {
+  constructor(public spoty:SpotyService, public router:Router) {
     this.spoty.changeTextNamePage("Search")
   }
 
-  ngOnInit() {
 
+  all(){
+    this.router.navigate(["search"])
   }
 
 }

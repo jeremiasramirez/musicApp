@@ -20,8 +20,6 @@ const ROUTES : Routes = [
     {path: 'releases', component: ReleasesComponent},
     {path: 'albums/track/:id', component: AlbumsComponent},
     {path: 'search', component: SearchComponent},
-    {path: 'search/track/:track', component: SearchComponent},
-    {path: 'search/album/:album', component: SearchComponent},
     {path: 'about', component: AboutComponent},
     {path: '', component: InitComponent},
     {path: '**', component: InitComponent}
