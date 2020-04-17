@@ -1,9 +1,11 @@
-<div class="containerNewReleases">
+<div class="responsive inTop" *ngIf="spinner.off">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<div class="containerNewReleases" *ngIf="!spinner.off">
     <div class="cards inTop " >
 
-
-
-        <div class="card" *ngFor="let releases of cardReleases" matRipple>
+        <div class="card inTop" *ngFor="let releases of cardReleases" matRipple>
             <div class="container__image">
                 <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images">
             </div>
