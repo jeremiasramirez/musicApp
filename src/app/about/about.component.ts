@@ -7,9 +7,14 @@ import { SpotyService } from "../services/spoty.service"
   providers: [SpotyService]
 })
 export class AboutComponent  {
-
+  public spinner={
+    off:true
+  }
   constructor(public spoti:SpotyService) {
     this.spoti.changeTextNamePage("About")
+    setTimeout(() => {
+        this.spinner.off=false
+    }, 800);
   }
 
 }

@@ -1,1 +1,12 @@
-<p>about works!</p>
+<div class="responsive inTop" *ngIf="spinner.off">
+  <mat-spinner color="primary"></mat-spinner>
+</div>
+
+
+<div class="responsive inBottom" *ngIf="!spinner.off">
+ <h1 class="title text--blue">Aplicacion de prueba, no comercial</h1>
+</div>
+
+<div class="responsive inBottom" *ngIf="!spinner.off">
+ <img src="assets/logo/head.png" alt="headphone" class="min">
+</div>
