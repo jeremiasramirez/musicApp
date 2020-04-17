@@ -21,6 +21,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import {MatRippleModule} from '@angular/material/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle'
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 @NgModule({
   declarations: [
 
@@ -42,7 +44,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     MatRippleModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTooltipModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
