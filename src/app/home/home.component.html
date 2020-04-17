@@ -25,7 +25,7 @@
 
 <section class="albums"  *ngIf="!spinner2.off">
 
-    <div class="album inTop" *ngFor="let album of albums; let i=index" matRipple>
+    <div class="album inTop" *ngFor="let album of albums; let i=index" matRipple (click)="showAlbum(album.id)">
 
         <img src="../../assets/albumImage/{{album.image}}" alt="image album">
 

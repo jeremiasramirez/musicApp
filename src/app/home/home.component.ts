@@ -1,6 +1,7 @@
 import { Component } from "@angular/core"
 import { SpotyService } from "../services/spoty.service"
-import { Subject } from "rxjs";
+import { Router} from "@angular/router"
+import { Subject, timer } from "rxjs";
  import { take ,delay} from "rxjs/operators";
 @Component({
 
@@ -24,7 +25,7 @@ export class HomeComponent{
     public spinner2 = {
       off:true
     }
-    constructor(private spoty: SpotyService){
+    constructor(private spoty: SpotyService, public router:Router){
       this.albumReleases();
       this.getAlbums();
       this.spoty.changeTextNamePage("Music")
@@ -43,6 +44,11 @@ export class HomeComponent{
     getAlbums(){
       this.spoty.getAlbum().pipe(delay(800)).subscribe(resp=>this.albums = resp, (err)=>{return err}, ()=>{this.spinner2.off=false} )
 
+    }
+
+    showAlbum(id:number){
+      timer(500).subscribe(timing=>this.router.navigate(["albums/track", id]))
+      this.spinner2.off=true
     }
 
 
