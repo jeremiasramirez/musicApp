@@ -1,7 +1,7 @@
 import { Component } from "@angular/core"
 import { SpotyService } from "../services/spoty.service"
 import { Subject } from "rxjs";
-import { take } from "rxjs/operators";
+ import { take ,delay} from "rxjs/operators";
 @Component({
 
     selector: 'home',
@@ -18,7 +18,12 @@ export class HomeComponent{
     public showNameStyle : any = 0;
     public bandList  : number = 0;
     public obsReleases = new Subject()
-
+    public spinner = {
+      off:true
+    }
+    public spinner2 = {
+      off:true
+    }
     constructor(private spoty: SpotyService){
       this.albumReleases();
       this.getAlbums();
@@ -28,15 +33,15 @@ export class HomeComponent{
 
     albumReleases (){
       this.spoty.getNewRelease().subscribe(data=>{
-        for (let index = 0; index < 1; index++) {
+        for (let index = 0; index < 3; index++) {
           this.cardReleases[index] = data[index]
 
         }
-      })
+      }, (err)=>{return err}, ()=>{this.spinner.off=false})
     }
 
     getAlbums(){
-      this.spoty.getAlbum().subscribe(resp=>this.albums = resp )
+      this.spoty.getAlbum().pipe(delay(800)).subscribe(resp=>this.albums = resp, (err)=>{return err}, ()=>{this.spinner2.off=false} )
 
     }
 

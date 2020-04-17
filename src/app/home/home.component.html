@@ -1,5 +1,9 @@
 <div class="containerNewReleases">
-    <div class="cards inTop ">
+  <div class="responsive inTop" *ngIf="spinner.off">
+    <mat-spinner color="accent"></mat-spinner>
+  </div>
+
+    <div class="cards inTop " *ngIf="!spinner.off">
 
 
 
@@ -7,7 +11,7 @@
             <div class="container__image">
                 <img class="card__image" src="../../assets/imgReleaseAlbum/{{releases.image}}" alt="images">
             </div>
-            <div class="nameAlbumReleases in">More..</div>
+            <!-- <div class="nameAlbumReleases in">{{releases.name}}.</div> -->
         </div>
 
 
@@ -18,10 +22,10 @@
 </div>
 
 
-<h1 class="title text--orange letter3">Album</h1>
-<section class="albums">
 
-    <div class="album" *ngFor="let album of albums; let i=index">
+<section class="albums"  *ngIf="!spinner2.off">
+
+    <div class="album inTop" *ngFor="let album of albums; let i=index" matRipple>
 
         <img src="../../assets/albumImage/{{album.image}}" alt="image album">
 
@@ -44,3 +48,8 @@
 
 
 </section>
+
+
+<div class="responsive inTop" *ngIf="spinner2.off">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
