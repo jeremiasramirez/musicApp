@@ -10,10 +10,16 @@ export class SpotyService{
 
     public newReleases :string = "assets/datapi/albumRelease.json"
     constructor(){
-     
+
     }
     public changeTextNamePage(name:string){
         document.getElementById('idTheme').innerText=name
+    }
+    public setColorTheme(theme:string="theme--blue", menu:string="menu--blue"){
+      let theme_ = document.getElementById("theme")
+      let menu_ = document.getElementById("menu")
+      theme_.className=theme
+      menu_.className=menu
     }
     getNewRelease(){
 

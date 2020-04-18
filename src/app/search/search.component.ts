@@ -11,6 +11,7 @@ export class SearchComponent  {
 
   constructor(public spoty:SpotyService, public router:Router) {
     this.spoty.changeTextNamePage("Search")
+    this.spoty.setColorTheme()
   }
 
 

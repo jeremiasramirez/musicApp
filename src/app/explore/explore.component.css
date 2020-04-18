@@ -1,0 +1,21 @@
+.container--cards{
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  flex-wrap: wrap;
+}
+
+
+.card--explore{
+  height: 60px;
+  border-radius: 3px;
+  width: 310px;
+  margin: .6em .5em;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.card--explore h1{
+  font-weight: 500;
+  text-align: center;
+}
