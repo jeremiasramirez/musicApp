@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotyService } from "../services/spoty.service"
-
+import { timer } from "rxjs";
 @Component({
   selector: 'app-explore',
   templateUrl: './explore.component.html',
@@ -8,10 +8,12 @@ import { SpotyService } from "../services/spoty.service"
   providers: [SpotyService]
 })
 export class ExploreComponent implements OnInit {
-
+  public spinner = {
+    off:true
+  }
   constructor(public spoti:SpotyService) {
     this.spoti.changeTextNamePage("Explore")
-    // this.spoti.setColorTheme('theme--red','menu--red')
+    timer(700).subscribe(timing=>this.spinner.off=false)
   }
 
   ngOnInit() {

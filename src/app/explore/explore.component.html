@@ -1,31 +1,36 @@
-<section class="responsive">
+<section class="responsive" *ngIf="!spinner.off">
 
 
   <div class="container--cards">
 
-    <div matRipple class="card--explore  ">
+    <div matRipple class="card--explore inBottom  ">
       <h1>Pop</h1>
     </div>
 
-    <div matRipple class="card--explore ">
+    <div matRipple class="card--explore inBottom ">
       <h1>Romantic</h1>
     </div>
 
-    <div matRipple class="card--explore ">
+    <div matRipple class="card--explore inBottom ">
       <h1>Reggaeton</h1>
     </div>
 
-    <div matRipple class="card--explore ">
+    <div matRipple class="card--explore inBottom ">
       <h1>Latin</h1>
     </div>
 
-    <div matRipple class="card--explore ">
+    <div matRipple class="card--explore inBottom ">
       <h1>Rock</h1>
     </div>
 
-    <div matRipple   class="card--explore ">
+    <div matRipple   class="card--explore inBottom ">
       <h1>Bachatas</h1>
     </div>
 
   </div>
 </section>
+
+
+<div class="responsive inBottom" *ngIf="spinner.off">
+  <mat-spinner></mat-spinner>
+</div>

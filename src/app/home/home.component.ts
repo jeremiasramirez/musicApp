@@ -48,7 +48,7 @@ export class HomeComponent{
     }
 
     showAlbum(id:number){
-      timer(500).subscribe(timing=>this.router.navigate(["albums/track", id]))
+      timer(1000).subscribe(timing=>this.router.navigate(["albums/track", id]))
       this.spinner2.off=true
     }
 

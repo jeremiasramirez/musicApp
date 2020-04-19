@@ -3,6 +3,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: 3000;
     left: -10px;
     background-image: linear-gradient(to bottom, blue, #b80b5e);
     text-align: center;

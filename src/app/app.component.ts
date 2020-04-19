@@ -15,7 +15,7 @@ export class AppComponent {
       if (iter==0){
         iter = 1;
         this.spoti.setColorTheme('theme--black','menu--black')
-        document.getElementById("body").style.backgroundColor="rgba(0%, 0%, 0%, 80%)"
+        document.getElementById("body").style.backgroundColor="black"
       }
 
       else{

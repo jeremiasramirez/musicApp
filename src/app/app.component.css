@@ -1,3 +1,9 @@
 .menu--blue {
     margin-top: -1em;
 }
+.fixed{
+  position: sticky;
+  top: 0px;
+  z-index: 2000;
+
+}
