@@ -12,7 +12,7 @@ export class AboutComponent  {
   }
   constructor(public spoti:SpotyService) {
     this.spoti.changeTextNamePage("About")
-    this.spoti.setColorTheme()
+    // this.spoti.setColorTheme()
     setTimeout(() => {
         this.spinner.off=false
     }, 800);

@@ -29,7 +29,7 @@ export class HomeComponent{
       this.albumReleases();
       this.getAlbums();
       this.spoty.changeTextNamePage("Music")
-      this.spoty.setColorTheme()
+      // this.spoty.setColorTheme()
     }
 
 

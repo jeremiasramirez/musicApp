@@ -11,7 +11,7 @@ export class ExploreComponent implements OnInit {
 
   constructor(public spoti:SpotyService) {
     this.spoti.changeTextNamePage("Explore")
-    this.spoti.setColorTheme('theme--red','menu--red')
+    // this.spoti.setColorTheme('theme--red','menu--red')
   }
 
   ngOnInit() {

@@ -14,7 +14,7 @@ export class ReleasesComponent  {
     }
   constructor(public spoti:SpotyService) {
       this.spoti.changeTextNamePage("Releases")
-      this.spoti.setColorTheme()
+      // this.spoti.setColorTheme()
       this.albumReleases()
   }
 

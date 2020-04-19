@@ -10,7 +10,7 @@ export class AlbumsComponent  {
 
   constructor( public spoti:SpotyService) {
     this.spoti.changeTextNamePage("Albums")
-    this.spoti.setColorTheme()
+    // this.spoti.setColorTheme()
    }
 
 
